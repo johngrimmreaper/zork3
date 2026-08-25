@@ -1,0 +1,25 @@
+Source: zork3
+Section: games
+Priority: optional
+Maintainer: Reaper <JohnGrimmReaper@disroot.org>
+Build-Depends:
+ debhelper-compat (= 13),
+Standards-Version: 4.7.4.1
+Rules-Requires-Root: no
+Homepage: https://github.com/historicalsource/zork3
+Vcs-Browser: https://github.com/johngrimmreaper/zork3/tree/debian/sid
+Vcs-Git: https://github.com/johngrimmreaper/zork3.git -b debian/sid
+
+Package: zork3
+Architecture: all
+Depends:
+ frotz,
+ ${misc:Depends},
+Description: classic interactive fiction adventure
+ Zork III: The Dungeon Master is the third commercial installment of Infocom's
+ classic Zork interactive-fiction trilogy. The player explores the fading Great
+ Underground Empire and faces a final series of trials set by the Dungeon
+ Master.
+ .
+ This package contains the MIT-licensed upstream Z-machine version 3 story
+ image and a launcher that runs it with the Frotz interpreter.

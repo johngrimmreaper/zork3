@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Zork III
+GenericName=Interactive Fiction
+Comment=Face the trials of the Dungeon Master
+Exec=/usr/games/zork3
+TryExec=/usr/games/zork3
+Icon=utilities-terminal
+Terminal=true
+Categories=Game;AdventureGame;
+Keywords=Zork;Infocom;Interactive Fiction;Text Adventure;
+StartupNotify=false

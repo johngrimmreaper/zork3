@@ -1,0 +1,13 @@
+zork3 (0~git20251120.3ec9ed4-1) UNRELEASED; urgency=medium
+
+  * Initial Debian release.
+  * Package the MIT-licensed historical Zork III source snapshot released by
+    Microsoft.
+  * Install the upstream-provided Z-machine version 3 story image and run it
+    with Frotz.
+  * Add desktop integration, a manual page, upstream metadata, a watch file,
+    and autopkgtests.
+  * Document the provenance and rebuild limitations of the historical story
+    image in debian/README.source.
+
+ -- Reaper <JohnGrimmReaper@disroot.org>  Tue, 25 Aug 2026 15:45:00 +0000

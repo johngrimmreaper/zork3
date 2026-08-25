@@ -1,0 +1,19 @@
+#!/bin/sh
+set -eu
+
+story=/usr/share/games/zork3/zork3.z3
+launcher=/usr/games/zork3
+desktop=/usr/share/applications/zork3.desktop
+output="$(mktemp)"
+trap 'rm -f "$output"' EXIT HUP INT TERM
+
+[ -s "$story" ]
+[ -x "$launcher" ]
+[ -s "$desktop" ]
+
+test "$(od -An -tu1 -N1 "$story" | tr -d ' ')" = 3
+grep -F "$story" "$launcher" >/dev/null
+desktop-file-validate "$desktop"
+
+printf 'quit\ny\n' | timeout 15s /usr/games/dfrotz "$story" >"$output" 2>&1
+grep -F 'ZORK III' "$output" >/dev/null

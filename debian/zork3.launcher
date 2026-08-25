@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+
+exec /usr/games/frotz "$@" /usr/share/games/zork3/zork3.z3
